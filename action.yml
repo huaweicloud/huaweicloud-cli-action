@@ -1,0 +1,23 @@
+name: 'Huawei Cloud KooCLI Action'
+description: 'Setup KooCLI and add it to the PATH and set default configuration.'
+branding:
+  icon: 'cloud'
+  color: 'red'
+inputs:
+  access_key:
+    description: 'Access key id'
+    required: false
+  secret_key:
+    description: 'Secret access key'
+    required: false
+  region:
+    description: 'Region'
+    required: false
+    default: 'cn-north-4'
+  command_list: 
+    required: false
+    description: 'operation instructions provided by KooCLI to configure the working environment or call open APIs of Huawei Cloud services'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
